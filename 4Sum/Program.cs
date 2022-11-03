@@ -7,8 +7,8 @@ namespace _4Sum
   {
     static void Main(string[] args)
     {
-      int target = 0;
-      var nums = new int[] { 1, 0, -1, 0, -2, 2 };
+      int target = - 294967296;
+      var nums = new int[] { 1000000000, 1000000000, 1000000000, 1000000000 };
       var result = FourSum(nums, target);
       foreach(var res in result)
         Console.WriteLine(string.Join(",", res));
@@ -39,7 +39,7 @@ namespace _4Sum
           int left = j + 1, right = length - 1;
           while (left < right)
           {
-            int sum = nums[i] + nums[j] + nums[left] + nums[right];
+            var sum = (long)nums[i] + nums[j] + nums[left] + nums[right];
             if(sum == target)
             {
               var temp = new List<int>();
